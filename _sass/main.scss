@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+.home {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/blutakos.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+.last_name {
+    height: 33vh;
+    position: absolute;
+    top: 33vh;
+    right: 2vw;
+}
+
+.octocat {
+    opacity: 0.7;
+    position: absolute;
+    right: 1vw;
+    bottom: 1vw;
+    height: 10vh;
+}
