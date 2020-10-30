@@ -13,23 +13,13 @@
     color: #ffffff;
 }
 
-.first_name {
+.name {
     letter-spacing: 0.2em;
     font-size: 5vh;
     position: absolute;
     top: 5vh;
     left: 3vw;
-    width: 100%;
     max-width: 50vw;
-}
-
-.last_name {
-    height: 33vh;
-    position: absolute;
-    top: 33vh;
-    right: 3vw;
-    width: 100%;
-    max-width: 25vw;
 }
 
 .octocat {
