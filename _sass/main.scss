@@ -2,6 +2,34 @@
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman';
+    color: #000;
+    text-decoration: none;
+}
+
+.header {
+    padding: 10vh 5vw;
+}
+
+.name {
+    font-size: 2em;
+    letter-spacing: 0.2em;
+}
+
+.nav {
+    list-style: none;
+}
+
+.nav li {
+    float: left;
+    line-height: 100%;
+}
+
+.nav li a {
+    padding: 0px 10px;
+}
+
+.nav li a:hover {
+    color: blue;
 }
 
 .home {
@@ -11,28 +39,4 @@
     background-size: cover;
     background-position: top;
     color: #ffffff;
-}
-
-.name {
-    letter-spacing: 0.2em;
-    font-size: 5vh;
-    position: absolute;
-    top: 5vh;
-    left: 3vw;
-    max-width: 50vw;
-}
-
-.octocat {
-    background-image: url(../images/octocat.png);
-    background-size: cover;
-    background-position: center;
-    opacity: 0.7;
-    position: absolute;
-    right: 1vw;
-    bottom: 1vw;
-    height: 10vh;
-    width: 10vh;
-}
-.octocat:hover {
-    opacity: 1;
 }
