@@ -35,7 +35,8 @@ markdown: kramdown
 # theme: minima
 gems:
   - jekyll-paginate-v2
-# plugins:
+plugins:
+  - jekyll-paginate-v2
 #   - jekyll-feed
 
 # Pagination Settings
