@@ -2,21 +2,58 @@
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman';
-    color: #000;
+}
+
+h1 {
+    letter-spacing: 0.05em;
+    margin: 0.67em 0;
+    font-weight: normal;
+    line-height: 150%;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+    font-weight: normal;
+    line-height: 150%;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+  font-weight: normal;
+  line-height: 150%;
+}
+
+a {
     text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: line-through;
+}
+
+a img:hover {
+    -webkit-filter: brightness(90%);
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+ul {
+    list-style: none;
 }
 
 .header {
-    padding: 10vh 5vw;
+    padding: 15vh 5vw;
 }
 
 .name {
     font-size: 2em;
     letter-spacing: 0.2em;
-}
-
-.nav {
-    list-style: none;
 }
 
 .nav li {
@@ -28,15 +65,61 @@
     padding: 0px 10px;
 }
 
-.nav li a:hover {
-    color: blue;
+.socials {
+    padding: 1em 0;
 }
 
-.home {
+.socials li {
+    float: left;
+}
+
+.socials img {
+    padding: 0 4px;
+    width: 16px;
+}
+
+.fullscreen_parallax {
     width: 100vw;
     height: 100vh;
-    background-image: url(../images/blutakos.jpg);
+    background-image: url(../images/emanating.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.latest_post {
+    padding: 15vh 12.5vw;
+    text-align: center;
+}
+
+.latest_post img {
+    margin: 10vh 0;
+    width: 50vw;
+}
+
+.swirl {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/swirl.jpg);
     background-size: cover;
     background-position: top;
-    color: #ffffff;
+}
+
+.posts {
+    width: 90vw;
+    padding: 10vh 5vw;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.posts li {
+    display: block;
+    width: 25vw;
+    flex: 0 1 auto;
+}
+
+.posts img {
+    width: 25vw;
 }

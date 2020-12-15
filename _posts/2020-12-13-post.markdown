@@ -1,0 +1,8 @@
+---
+layout: post
+title: "The Quick Brown Fox"
+subtitle: "Jumps over the lazy dog"
+date: 2020-12-13
+landscape: "/assets/images/post.JPG"
+portrait: "/assets/images/pizza.jpg"
+---

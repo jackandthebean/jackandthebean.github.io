@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+    {%- include head.html -%}
+
+    <body>
+
+        {%- include header.html -%}
+
+        <div class="fullscreen_parallax"></div>
+
+        <div class="latest_post">
+            <a href="{{ site.posts.first.url }}">
+                <h3>{{ site.posts.first.date | date_to_long_string }}</h3>
+                <h1>{{ site.posts.first.title }}</h1>
+                <h2>{{ site.posts.first.subtitle }}</h2>
+                <img src="{{ site.posts.first.landscape }}">
+            </a>
+        </div>
+
+        <div class="swirl"></div>
+
+        <ul class="posts">
+            {% for post in paginator.posts %}
+                <li>
+                    <a href="{{ post.url }}">
+                        <img src="{{ post.portrait }}">
+                        <h3>{{ post.date | date_to_long_string }}</h3>
+                        <h1>{{ post.title }}</h1>
+                        <h2>{{ post.subtitle }}</h2>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+
+        {{ content }}
+
+        {%- include footer.html -%}
+
+    </body>
+
+</html>

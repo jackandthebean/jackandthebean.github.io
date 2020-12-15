@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Third Post! Third Post! Third Post!"
+subtitle: "The third post third post third post third post third post third post third post third post third post third post third post third post third post third post third post third post third post third post third post"
+date: 2020-12-15
+landscape: "/assets/images/post.JPG"
+portrait: "/assets/images/pizza.jpg"
+---

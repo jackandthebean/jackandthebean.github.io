@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Second Post!"
+subtitle: "The second post"
+date: 2020-12-14
+landscape: "/assets/images/post.JPG"
+portrait: "/assets/images/pizza.jpg"
+---

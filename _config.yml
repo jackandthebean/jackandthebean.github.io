@@ -28,11 +28,26 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username: jackandthebean
+instagram_username: pearspine
 
 # Build settings
+markdown: kramdown
 # theme: minima
+gems:
+  - jekyll-paginate-v2
 # plugins:
 #   - jekyll-feed
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 3
+  offset: 1
+  permalink: '/page/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
