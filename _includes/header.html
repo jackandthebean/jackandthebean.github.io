@@ -2,7 +2,7 @@
     <ul class="nav">
         <li><a class="name" href="/">Jacqueline Lee</a></li>
         {% for page in site.pages reversed %}
-            {% if page.layout == 'default' %}
+            {% if page.layout == 'about' or page.layout == 'category' %}
                 {% unless page.exclude %}
                     <li style="float: right"><a href="{{ page.url }}">{{ page.title }}</a></li>
                 {% endunless %}

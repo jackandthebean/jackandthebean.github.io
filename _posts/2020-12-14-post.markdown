@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Second Post!"
 subtitle: "The second post"
 date: 2020-12-14
