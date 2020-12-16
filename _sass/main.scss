@@ -5,6 +5,7 @@
 }
 
 h1 {
+    font-size: 2em;
     letter-spacing: 0.05em;
     margin: 0.67em 0;
     font-weight: normal;
@@ -19,10 +20,10 @@ h2 {
 }
 
 h3 {
-  font-size: 1.17em;
-  margin: 1em 0;
-  font-weight: normal;
-  line-height: 150%;
+    font-size: 1.17em;
+    margin: 1em 0;
+    font-weight: normal;
+    line-height: 150%;
 }
 
 a {
@@ -47,38 +48,46 @@ ul {
     list-style: none;
 }
 
-.header {
-    padding: 15vh 5vw;
+hr {
+    border: none;
+    border-top: 1px solid;
 }
 
-.name {
+.flex_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    padding: 15vh 5vw;
+    align-items: flex-end;
+}
+
+.title {
     font-size: 2em;
     letter-spacing: 0.2em;
 }
 
-.nav li {
-    float: left;
-    line-height: 100%;
+.nav_item {
+    font-size: 1.5em;
+    padding: 1.5em 0 0;
+    text-align: right;
 }
 
-.nav li a {
-    padding: 0px 10px;
+.footer {
+    padding: 15vh 5vw;
 }
 
-.socials {
+.foot {
     padding: 1em 0;
 }
 
-.socials li {
-    float: left;
-}
-
 .socials img {
-    padding: 0 4px;
+    padding-right: 8px;
     width: 16px;
 }
 
-.fullscreen_parallax {
+.hero {
     width: 100vw;
     height: 100vh;
     background-image: url(/assets/images/emanating.JPG);
@@ -93,11 +102,10 @@ ul {
 .latest_post {
     padding: 15vh 12.5vw;
     text-align: center;
-}
-
-.latest_post img {
-    margin: 10vh 0;
-    width: 50vw;
+    img {
+        margin: 10vh 0;
+        width: 50vw;
+    }
 }
 
 .swirl {
@@ -111,18 +119,13 @@ ul {
 .posts {
     width: 90vw;
     padding: 10vh 5vw;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
     text-align: right;
-}
-
-.posts li {
-    display: block;
-    width: 25vw;
-    flex: 0 1 auto;
-}
-
-.posts img {
-    width: 25vw;
+    li {
+        width: 25vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    img {
+        width: 25vw;
+    }
 }

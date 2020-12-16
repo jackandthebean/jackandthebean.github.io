@@ -1,10 +1,10 @@
-<div class="header">
-    <ul class="nav">
-        <li><a class="name" href="/">Jacqueline Lee</a></li>
-        {% for page in site.pages reversed %}
+<div class="header flex_between">
+    <a class="title" href="{{ site.url }}">{{ site.title }}</a>
+    <ul>
+        {% for page in site.pages %}
             {% if page.layout == 'about' or page.layout == 'category' %}
                 {% unless page.exclude %}
-                    <li style="float: right"><a href="{{ page.url }}">{{ page.title }}</a></li>
+                    <li class="nav_item"><a href="{{ page.url }}">{{ page.title }}</a></li>
                 {% endunless %}
             {% endif %}
         {% endfor %}

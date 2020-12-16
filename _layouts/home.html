@@ -7,7 +7,7 @@
 
         {%- include header.html -%}
 
-        <div class="fullscreen_parallax"></div>
+        <div class="hero"></div>
 
         <div class="latest_post">
             <a href="{{ site.posts.first.url }}">
@@ -20,7 +20,7 @@
 
         <div class="swirl"></div>
 
-        <ul class="posts">
+        <ul class="posts flex_between">
             {% for post in paginator.posts %}
                 <li>
                     <a href="{{ post.url }}">
