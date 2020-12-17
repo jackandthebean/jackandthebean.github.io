@@ -99,9 +99,7 @@ hr {
     letter-spacing: 0.4em;
     color: $accent-font-color;
     text-transform: uppercase;
-    @media only screen and #{$mobile} {
-        letter-spacing: 0.2em;
-    }
+    max-width: 45vw;
 }
 
 .nav_item {
