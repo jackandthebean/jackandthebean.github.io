@@ -70,7 +70,6 @@ hr {
 .flex_space_between {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .button {
@@ -100,6 +99,9 @@ hr {
     letter-spacing: 0.4em;
     color: $accent-font-color;
     text-transform: uppercase;
+    @media only screen and #{$mobile} {
+        letter-spacing: 0.2em;
+    }
 }
 
 .nav_item {
