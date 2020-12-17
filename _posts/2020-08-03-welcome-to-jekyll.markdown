@@ -2,7 +2,6 @@
 title: "Welcome to Jekyll!"
 subtitle: "The first post"
 date: 2020-08-03
-categories: jekyll update
 landscape: "/assets/images/post.JPG"
 portrait: "/assets/images/pizza.jpg"
 ---

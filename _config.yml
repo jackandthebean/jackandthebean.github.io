@@ -42,8 +42,7 @@ plugins:
 # Pagination Settings
 pagination:
   enabled: true
-  per_page: 3
-  offset: 1
+  per_page: 25
   permalink: '/page/:num/'
   title: ':title - page :num of :max'
   limit: 0

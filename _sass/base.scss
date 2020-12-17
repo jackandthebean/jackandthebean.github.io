@@ -1,0 +1,120 @@
+$body-font: 'Spectral';
+$heading-font: 'Arial';
+$body-font-color: black;
+$accent-font-color: green;
+$side-padding: 5vw;
+$mobile: '(max-device-width: 1366px)';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $body-font;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+h1, h2, h3, .site_title {
+    font-family: $heading-font;
+    line-height: 150%;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.67em 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    font-weight: normal;
+    margin: 1em 0;
+    color: $accent-font-color;
+}
+
+a {
+    text-decoration: none;
+    color: $body-font-color;
+}
+
+a:hover {
+    text-decoration: line-through;
+
+    img {
+        -webkit-filter: brightness(90%);
+        -webkit-transition: all 0.25s ease;
+        -moz-transition: all 0.25s ease;
+        -o-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid;
+}
+
+.flex_space_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    border: 1px solid $body-font-color;
+    padding: 0.9em 1.8em;
+    font-family: $heading-font;
+    letter-spacing: 0.1em;
+    text-align: center;
+}
+
+.button:hover {
+    text-decoration: none;
+    background-color: $body-font-color;
+    color: white;
+}
+
+.header, .footer {
+    padding: 15vh $side-padding;
+}
+
+.header {
+    align-items: flex-end;
+}
+
+.site_title {
+    font-size: 2em;
+    letter-spacing: 0.4em;
+    color: $accent-font-color;
+    text-transform: uppercase;
+}
+
+.nav_item {
+    padding: 1.5em 0 0;
+    text-align: right;
+    * {
+        font-family: $heading-font;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+}
+
+.footer_content {
+    padding: 1em 0;
+}
+
+.socials li {
+    padding-right: 1em;
+}

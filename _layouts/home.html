@@ -11,27 +11,32 @@
 
         <div class="latest_post">
             <a href="{{ site.posts.first.url }}">
-                <h3>{{ site.posts.first.date | date_to_long_string }}</h3>
+                <h3>{{ site.posts.first.date | date: "%m/%d/%Y" }}</h3>
                 <h1>{{ site.posts.first.title }}</h1>
                 <h2>{{ site.posts.first.subtitle }}</h2>
                 <img src="{{ site.posts.first.landscape }}">
             </a>
         </div>
 
-        <div class="emanating"></div>
+        <div class="hero_2"></div>
 
-        <ul class="posts flex_between">
-            {% for post in paginator.posts %}
+        <ul class="featured_posts flex_space_between">
+            {% for post in site.posts offset:1 limit:3 %}
                 <li>
                     <a href="{{ post.url }}">
                         <img src="{{ post.portrait }}">
-                        <h3>{{ post.date | date_to_long_string }}</h3>
+                        <h3>{{ post.date | date: "%m/%d/%Y" }}</h3>
                         <h1>{{ post.title }}</h1>
                         <h2>{{ post.subtitle }}</h2>
                     </a>
                 </li>
             {% endfor %}
         </ul>
+
+        {% assign blog_page = site.pages | where: "title", "blog" %}
+        <div style="text-align: center">
+            <a class="button" href="{{ blog_page[0].url }}">All Stories</a>
+        </div>
 
         {{ content }}
 

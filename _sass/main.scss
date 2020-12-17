@@ -1,124 +1,41 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Times New Roman';
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
-}
-
-h1 {
-    font-size: 2em;
-    letter-spacing: 0.05em;
-    margin: 0.67em 0;
-    font-weight: normal;
-    line-height: 150%;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin: 0.83em 0;
-    font-weight: normal;
-    line-height: 150%;
-}
-
-h3 {
-    font-size: 1.17em;
-    margin: 1em 0;
-    font-weight: normal;
-    line-height: 150%;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-a:hover {
-    text-decoration: line-through;
-}
-
-a img:hover {
-    -webkit-filter: brightness(90%);
-    -webkit-transition: all 0.25s ease;
-    -moz-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
-    -ms-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-}
-
-ul {
-    list-style: none;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid;
-}
-
-.flex_between {
-    display: flex;
-    justify-content: space-between;
-}
-
-.header {
-    padding: 15vh 5vw;
-    align-items: flex-end;
-}
-
-.title {
-    font-size: 2em;
-    letter-spacing: 0.2em;
-}
-
-.nav_item {
-    font-size: 1.5em;
-    padding: 1.5em 0 0;
-    text-align: right;
-}
-
-.footer {
-    padding: 15vh 5vw;
-}
-
-.foot {
-    padding: 1em 0;
-}
-
-.socials li {
-    padding-right: 1em;
-}
+@import "base.scss";
 
 .hero {
     width: 100vw;
     height: 100vh;
-    background-image: url(/assets/images/post.JPG);
+    background-image: url(/assets/images/blutakos.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-attachment: fixed;
-    @media only screen and (max-device-width: 1366px) {
+    @media only screen and #{$mobile} {
         background-attachment: scroll;
     }
 }
 
 .latest_post {
     padding: 15vh 12.5vw;
-    text-align: center;
     img {
-        margin: 10vh 0;
+        margin: 10vh 0 1em;
         width: 50vw;
+        @media only screen and #{$mobile} {
+            width: 75vw;
+        }
     }
 }
 
-.emanating {
+.hero_2 {
     width: 100vw;
     height: 100vh;
-    background-image: url(/assets/images/emanating.JPG);
+    background-image: url(/assets/images/swirl.JPG);
     background-size: cover;
     background-position: top;
+    background-attachment: fixed;
+    @media only screen and #{$mobile} {
+        background-attachment: scroll;
+    }
 }
 
-.posts {
+.featured_posts {
     width: 90vw;
     padding: 10vh 5vw;
     text-align: right;
