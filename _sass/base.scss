@@ -99,7 +99,7 @@ hr {
     letter-spacing: 0.4em;
     color: $accent-font-color;
     text-transform: uppercase;
-    max-width: 45vw;
+    max-width: calc(95vw - 4.8em);
 }
 
 .nav_item {
