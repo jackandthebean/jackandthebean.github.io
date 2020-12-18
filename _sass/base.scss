@@ -4,16 +4,21 @@ $body-font-color: black;
 $accent-font-color: green;
 $side-padding: 5vw;
 $padded-width: calc(100vw - 2 * $side-padding);
-$mobile: '(max-width: 1366px) and (orientation: portrait)';
+$max-portrait-width: '(max-width: 1366px) and (orientation: portrait)';
+$max-device-width: '(max-device-width: 1366px)';
 
 * {
     margin: 0;
     padding: 0;
     font-family: $body-font;
+    color: $body-font-color;
+}
+
+h1, h2, h3, .site_title, .button {
+    font-family: $heading-font;
 }
 
 h1, h2, h3, .site_title {
-    font-family: $heading-font;
     line-height: 150%;
 }
 
@@ -21,8 +26,8 @@ h1 {
     font-size: 2em;
     font-weight: bold;
     margin: 0.67em 0;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -65,26 +70,22 @@ hr {
     border-top: 1px solid;
 }
 
-.flex_space_between {
+.flex_space_between, .flex_space_between_unresponsive {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    @media only screen and #{$mobile} {
+}
+
+.flex_space_between {
+    @media only screen and #{$max-portrait-width} {
         flex-direction: column;
         align-content: center;
     }
 }
 
-.flex_space_between_unresponsive {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
 .button {
     border: 1px solid $body-font-color;
     padding: 0.9em 1.8em;
-    font-family: $heading-font;
     letter-spacing: 0.1em;
     text-align: center;
 }
@@ -93,6 +94,16 @@ hr {
     text-decoration: none;
     background-color: $body-font-color;
     color: white;
+}
+
+.fullscreen_parallax {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    @media only screen and #{$max-device-width} {
+        background-attachment: scroll;
+    }
 }
 
 .header, .footer {
@@ -108,7 +119,7 @@ hr {
     letter-spacing: 0.4em;
     color: $accent-font-color;
     text-transform: uppercase;
-    @media only screen and #{$mobile} {
+    @media only screen and #{$max-portrait-width} {
         font-size: 1.5em;
     }
 }
@@ -117,14 +128,17 @@ hr {
     padding: 1.5em 0 0;
     text-align: right;
     * {
-        font-family: $heading-font;
         letter-spacing: 0.2em;
         text-transform: uppercase;
+        font-family: $heading-font;
     }
 }
 
 .footer_content {
     padding: 1em 0;
+    p {
+        text-align: right;
+    }
 }
 
 .socials li {

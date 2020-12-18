@@ -1,19 +1,26 @@
 <div class="header flex_space_between">
     <!-- Get current page name to highlight in navigation -->
     {% assign current_page = page.title %}
+    <!-- Initialize navigation array -->
+    {% assign nav = "About,Blog,Engaging,Food,Style" | split: ',' %}
 
     <!-- Site title -->
     <a class="site_title" href="{{ site.url }}">{{ site.title }}</a>
+
     <!-- Site navigation -->
     <ul>
-        {% for page in site.pages %}
-            {% if page.title == 'About' or page.title == 'Blog' or page.title == 'Engaging' or page.title == 'Food' or page.title == 'Style' %}
-                <!-- Use accent color on active page -->
-                {% if page.title == current_page %}
-                    <li class="nav_item"><a style="color: green" href="{{ page.url }}">{{ page.title }}</a></li>
-                {% else %}
-                    <li class="nav_item"><a href="{{ page.url }}">{{ page.title }}</a></li>
-                {% endif %}
+        <!-- Iterate through navigation array -->
+        {% for nav_item in nav %}
+            <!-- Find navigation item in site.pages -->
+            {% assign page_array = site.pages | where: "title", nav_item %}
+            <!-- Isolate page -->
+            {% assign page = page_array[0] %}
+            <!-- If page is active, use accent color -->
+            {% if page.title == current_page %}
+                <li class="nav_item"><a style="color: green" href="{{ page.url }}">{{ page.title }}</a></li>
+            <!-- Otherwise, use body color -->
+            {% else %}
+                <li class="nav_item"><a href="{{ page.url }}">{{ page.title }}</a></li>
             {% endif %}
         {% endfor %}
     </ul>

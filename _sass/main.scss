@@ -1,15 +1,8 @@
 @import "base.scss";
 
-.hero {
-    width: 100vw;
-    height: 100vh;
+.hero_1 {
     background-image: url(/assets/images/blutakos.jpg);
-    background-size: cover;
     background-position: bottom;
-    background-attachment: fixed;
-    @media only screen and #{$mobile} {
-        background-attachment: scroll;
-    }
 }
 
 .latest_post {
@@ -18,22 +11,15 @@
     img {
         margin: 10vh 0 1em;
         width: 50vw;
-        @media only screen and #{$mobile} {
+        @media only screen and #{$max-portrait-width} {
             width: 75vw;
         }
     }
 }
 
 .hero_2 {
-    width: 100vw;
-    height: 100vh;
     background-image: url(/assets/images/swirl.JPG);
-    background-size: cover;
     background-position: top;
-    background-attachment: fixed;
-    @media only screen and #{$mobile} {
-        background-attachment: scroll;
-    }
 }
 
 .featured_posts, .posts {
@@ -51,7 +37,7 @@
     h3 {
         font-size: 0.8775em;
     }
-    @media only screen and #{$mobile} {
+    @media only screen and #{$max-portrait-width} {
         * {
             width: 100%!important;
         }
