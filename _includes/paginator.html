@@ -1,0 +1,23 @@
+<ul class="posts flex_space_between">
+    {% for post in paginator.posts %}
+        <li>
+            <a href="{{ post.url }}">
+                <img src="{{ post.portrait }}">
+                <h3>{{ post.date | date: "%m/%d/%Y" }}</h3>
+                <h1>{{ post.title }}</h1>
+                <h2>{{ post.subtitle }}</h2>
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<div class="paginator flex_space_between_unresponsive">
+    {% if paginator.total_pages > 1 %}
+        {% if paginator.previous_page %}
+            <a class="button" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Newer Posts</a>
+        {% endif %}
+        {% if paginator.next_page %}
+            <a class="button older" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts</a>
+        {% endif %}
+    {% endif %}
+</div>

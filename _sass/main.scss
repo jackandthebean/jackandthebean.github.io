@@ -36,11 +36,46 @@
     }
 }
 
+.featured_posts, .posts {
+    width: $padded-width;
+    padding: 5vh $side-padding;
+    li {
+        margin: 5vh 0;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.125em;
+    }
+    h3 {
+        font-size: 0.8775em;
+    }
+    @media only screen and #{$mobile} {
+        * {
+            width: 100%!important;
+        }
+    }
+}
+
 .featured_posts {
-    width: 90vw;
-    padding: 10vh 5vw;
-    text-align: right;
     * {
         width: 25vw;
     }
+    text-align: right;
+}
+
+.posts {
+    * {
+        width: 15vw;
+    }
+}
+
+.paginator {
+    padding: 0 $side-padding;
+}
+
+.older {
+    position: absolute;
+    right: $side-padding;
 }

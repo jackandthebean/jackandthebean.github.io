@@ -3,7 +3,8 @@ $heading-font: 'Arial';
 $body-font-color: black;
 $accent-font-color: green;
 $side-padding: 5vw;
-$mobile: '(max-device-width: 1366px)';
+$padded-width: calc(100vw - 2 * $side-padding);
+$mobile: '(max-width: 1366px)';
 
 * {
     margin: 0;
@@ -70,6 +71,17 @@ hr {
 .flex_space_between {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @media only screen and #{$mobile} {
+        flex-direction: column;
+        align-content: center;
+    }
+}
+
+.flex_space_between_unresponsive {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .button {
@@ -99,7 +111,9 @@ hr {
     letter-spacing: 0.4em;
     color: $accent-font-color;
     text-transform: uppercase;
-    max-width: calc(95vw - 4.8em);
+    @media only screen and #{$mobile} {
+        font-size: 1.5em;
+    }
 }
 
 .nav_item {

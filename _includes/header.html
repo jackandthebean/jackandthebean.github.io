@@ -2,17 +2,18 @@
     <!-- Get current page name to highlight in navigation -->
     {% assign current_page = page.title %}
 
+    <!-- Site title -->
     <a class="site_title" href="{{ site.url }}">{{ site.title }}</a>
+    <!-- Site navigation -->
     <ul>
         {% for page in site.pages %}
-            {% if page.layout == 'about' or page.layout == 'blog' or page.layout == 'category' %}
-                {% unless page.exclude %}
-                    {% if page.title == current_page %}
-                        <li class="nav_item"><a style="color: green" href="{{ page.url }}">{{ page.title }}</a></li>
-                    {% else %}
-                        <li class="nav_item"><a href="{{ page.url }}">{{ page.title }}</a></li>
-                    {% endif %}
-                {% endunless %}
+            {% if page.title == 'About' or page.title == 'Blog' or page.title == 'Engaging' or page.title == 'Food' or page.title == 'Style' %}
+                <!-- Use accent color on active page -->
+                {% if page.title == current_page %}
+                    <li class="nav_item"><a style="color: green" href="{{ page.url }}">{{ page.title }}</a></li>
+                {% else %}
+                    <li class="nav_item"><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endif %}
             {% endif %}
         {% endfor %}
     </ul>
