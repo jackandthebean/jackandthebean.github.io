@@ -1,0 +1,80 @@
+@import "base.scss";
+
+.header, .footer {
+    padding: $top-padding $page-padding;
+}
+
+.header {
+    align-items: flex-end;
+}
+
+.site_title {
+    font-size: 2em;
+    letter-spacing: 0.4em;
+    color: $accent-font-color;
+    text-transform: uppercase;
+    @media only screen and #{$max-portrait-width} {
+        font-size: 1.5em;
+    }
+}
+
+.nav_item {
+    padding: 1.5em 0 0;
+    text-align: right;
+    * {
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-family: $heading-font;
+    }
+}
+
+.footer_content {
+    padding: 1em 0;
+}
+
+.socials li {
+    padding-right: 1em;
+}
+
+.featured_posts, .posts {
+    width: $padded-page-width;
+    padding: 5vh $page-padding;
+    li {
+        margin: 5vh 0;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.125em;
+    }
+    h3 {
+        font-size: 0.8775em;
+    }
+    @media only screen and #{$max-portrait-width} {
+        * {
+            width: 100%!important;
+        }
+    }
+}
+
+.featured_posts {
+    * {
+        width: 25vw;
+    }
+}
+
+.posts {
+    * {
+        width: 15vw;
+    }
+}
+
+.paginator {
+    padding: 0 $page-padding;
+}
+
+.older {
+    position: absolute;
+    right: $page-padding;
+}

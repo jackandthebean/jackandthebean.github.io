@@ -5,11 +5,13 @@
 
     <body>
 
+        <div class="skinny_parallax {{ page.parallax_class }}"></div>
+
         {%- include header.html -%}
 
-        {%- include paginator.html -%}
-
         {{ content }}
+
+        {%- include paginator.html -%}
 
         {%- include footer.html -%}
 

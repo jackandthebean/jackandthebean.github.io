@@ -2,8 +2,10 @@ $body-font: 'Spectral';
 $heading-font: 'Arial';
 $body-font-color: black;
 $accent-font-color: green;
-$side-padding: 5vw;
-$padded-width: calc(100vw - 2 * $side-padding);
+$page-padding: 5vw;
+$top-padding: 15vh;
+$side-padding: 10vw;
+$padded-page-width: calc(100vw - 2 * $page-padding);
 $max-portrait-width: '(max-width: 1366px) and (orientation: portrait)';
 $max-device-width: '(max-device-width: 1366px)';
 
@@ -20,6 +22,9 @@ h1, h2, h3, .site_title, .button {
 
 h1, h2, h3, .site_title {
     line-height: 150%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 h1 {
@@ -70,6 +75,27 @@ hr {
     border-top: 1px solid;
 }
 
+.accent {
+    color: $accent-font-color;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.container {
+    h1, h2, h3, p {
+        padding: 0 $side-padding;
+    }
+    p {
+        margin: 1.5em 0;
+    }
+}
+
 .flex_space_between, .flex_space_between_unresponsive {
     display: flex;
     justify-content: space-between;
@@ -88,6 +114,7 @@ hr {
     padding: 0.9em 1.8em;
     letter-spacing: 0.1em;
     text-align: center;
+    display: inline-block;
 }
 
 .button:hover {
@@ -106,41 +133,18 @@ hr {
     }
 }
 
-.header, .footer {
-    padding: 15vh $side-padding;
-}
-
-.header {
-    align-items: flex-end;
-}
-
-.site_title {
-    font-size: 2em;
-    letter-spacing: 0.4em;
-    color: $accent-font-color;
-    text-transform: uppercase;
-    @media only screen and #{$max-portrait-width} {
-        font-size: 1.5em;
+.skinny_parallax {
+    width: 100vw;
+    height: 30vh;
+    background-size: cover;
+    background-attachment: fixed;
+    @media only screen and #{$max-device-width} {
+        background-attachment: scroll;
     }
 }
 
-.nav_item {
-    padding: 1.5em 0 0;
-    text-align: right;
-    * {
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        font-family: $heading-font;
+.hide_on_mobile_devices {
+    @media only screen and #{$max-device-width} {
+        display: none;
     }
-}
-
-.footer_content {
-    padding: 1em 0;
-    p {
-        text-align: right;
-    }
-}
-
-.socials li {
-    padding-right: 1em;
 }

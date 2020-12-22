@@ -1,13 +1,8 @@
 @import "base.scss";
-
-.hero_1 {
-    background-image: url(/assets/images/blutakos.jpg);
-    background-position: bottom;
-}
+@import "includes.scss";
 
 .latest_post {
-    padding: 15vh 12.5vw;
-    text-align: center;
+    padding: $top-padding $side-padding;
     img {
         margin: 10vh 0 1em;
         width: 50vw;
@@ -17,51 +12,37 @@
     }
 }
 
+.hero_1 {
+    background-image: url(/assets/images/blutakos.jpg);
+    background-position: bottom;
+}
+
 .hero_2 {
-    background-image: url(/assets/images/swirl.JPG);
+    background-image: url(/assets/images/encaustic_paints.JPG);
+    background-position: center;
+}
+
+.about {
+    background-image: url(/assets/images/jardin_du_luxembourg.JPG);
     background-position: top;
 }
 
-.featured_posts, .posts {
-    width: $padded-width;
-    padding: 5vh $side-padding;
-    li {
-        margin: 5vh 0;
-    }
-    h1 {
-        font-size: 1.5em;
-    }
-    h2 {
-        font-size: 1.125em;
-    }
-    h3 {
-        font-size: 0.8775em;
-    }
-    @media only screen and #{$max-portrait-width} {
-        * {
-            width: 100%!important;
-        }
-    }
+.engaging {
+    background-image: url(/assets/images/herrington_road.JPG);
+    background-position: center;
 }
 
-.featured_posts {
-    * {
-        width: 25vw;
-    }
-    text-align: right;
+.food {
+    background-image: url(/assets/images/mise_en_place.JPG);
+    background-position: center;
 }
 
-.posts {
-    * {
-        width: 15vw;
-    }
+.style {
+    background-image: url(/assets/images/dior_saddle_bag.JPG);
+    background-position: center;
 }
 
-.paginator {
-    padding: 0 $side-padding;
-}
-
-.older {
-    position: absolute;
-    right: $side-padding;
+.fourohfour {
+    background-image: url(/assets/images/wine.JPG);
+    background-position: center;
 }

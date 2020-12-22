@@ -1,5 +1,33 @@
 ---
-layout: home
+layout: default
 title: Home
-exclude: true
 ---
+<div class="fullscreen_parallax hero_1"></div>
+
+<div class="latest_post center">
+    <a href="{{ site.posts.first.url }}">
+        <h3>{{ site.posts.first.date | date: "%m/%d/%Y" }}</h3>
+        <h1>{{ site.posts.first.title }}</h1>
+        <h2>{{ site.posts.first.subtitle }}</h2>
+        <img src="{{ site.posts.first.landscape }}">
+    </a>
+</div>
+
+<div class="skinny_parallax hero_2"></div>
+
+<ul class="featured_posts flex_space_between right">
+    {% for post in site.posts offset:1 limit:3 %}
+        <li>
+            <a href="{{ post.url }}">
+                <img src="{{ post.portrait }}">
+                <h3>{{ post.date | date: "%m/%d/%Y" }}</h3>
+                <h1>{{ post.title }}</h1>
+                <h2>{{ post.subtitle }}</h2>
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<div class="center">
+    <a class="button" href="/blog">All Stories</a>
+</div>

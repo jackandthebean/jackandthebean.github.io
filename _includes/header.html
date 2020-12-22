@@ -17,7 +17,7 @@
             {% assign page = page_array[0] %}
             <!-- If page is active, use accent color -->
             {% if page.title == current_page %}
-                <li class="nav_item"><a style="color: green" href="{{ page.url }}">{{ page.title }}</a></li>
+                <li class="nav_item"><a class="accent" href="{{ page.url }}">{{ page.title }}</a></li>
             <!-- Otherwise, use body color -->
             {% else %}
                 <li class="nav_item"><a href="{{ page.url }}">{{ page.title }}</a></li>
