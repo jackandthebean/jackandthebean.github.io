@@ -6,6 +6,7 @@ $page-padding: 5vw;
 $top-padding: 15vh;
 $side-padding: 10vw;
 $padded-page-width: calc(100vw - 2 * $page-padding);
+$padded-width: calc(100vw - 2 * $side-padding);
 $max-portrait-width: '(max-width: 1366px) and (orientation: portrait)';
 $max-device-width: '(max-device-width: 1366px)';
 
@@ -93,6 +94,14 @@ hr {
     }
     p {
         margin: 1.5em 0;
+        img {
+            margin: 1.5em 0;
+            width: 100%;
+            max-width: $padded-width;
+        }
+    }
+    a {
+        color: $accent-font-color;
     }
 }
 
