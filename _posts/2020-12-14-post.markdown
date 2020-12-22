@@ -1,7 +1,0 @@
----
-title: "Another Good Title!"
-subtitle: "Another good subtitle"
-date: 2020-12-14
-landscape: "/assets/images/post.JPG"
-portrait: "/assets/images/pizza.jpg"
----
