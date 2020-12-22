@@ -96,16 +96,25 @@ hr {
     }
 }
 
-.flex_space_between, .flex_space_between_unresponsive {
+.flex_space_between, .flex_space_between_centered_column, .flex_space_between_unresponsive, {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.flex_space_between {
+.flex_space_between, .flex_space_between_centered_column {
     @media only screen and #{$max-portrait-width} {
         flex-direction: column;
         align-content: center;
+    }
+}
+
+.flex_space_between_centered_column {
+    @media only screen and #{$max-portrait-width} {
+        align-items: center!important;
+        * {
+            text-align: center!important;
+        }
     }
 }
 
