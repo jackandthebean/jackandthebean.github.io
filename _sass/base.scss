@@ -5,8 +5,8 @@ $accent-font-color: green;
 $page-padding: 5vw;
 $top-padding: 15vh;
 $side-padding: 10vw;
-$padded-page-width: calc(100vw - 2 * $page-padding);
-$padded-width: calc(100vw - 2 * $side-padding);
+$padded-page-width: calc(100vw - 2 * #{$page-padding});
+$padded-width: calc(100vw - 2 * #{$side-padding});
 $max-portrait-width: '(max-width: 1366px) and (orientation: portrait)';
 $max-device-width: '(max-device-width: 1366px)';
 
@@ -86,6 +86,14 @@ hr {
 
 .right {
     text-align: right;
+}
+
+.side_padding {
+    padding: 0 $side-padding;
+}
+
+.two_imgs {
+    max-width: calc(#{$padded-width} / 2 - 1.5em);
 }
 
 .container {
