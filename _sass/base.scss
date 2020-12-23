@@ -95,6 +95,7 @@ hr {
 .two_imgs {
     width: 100%;
     max-width: calc(#{$padded-width} / 2 - 1.5em);
+    height: auto;
 }
 
 .container {
