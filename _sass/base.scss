@@ -97,6 +97,11 @@ hr {
     max-width: calc(#{$padded-width} / 2 - 1.5em);
 }
 
+.three_imgs {
+    width: 100%;
+    max-width: calc(#{$padded-width} / 3 - 2.5em);
+}
+
 .container {
     h1, h2, h3, p {
         padding: 0 $side-padding;
