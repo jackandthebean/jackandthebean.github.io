@@ -89,7 +89,7 @@ hr {
 }
 
 .side_padding {
-    padding: 0 $side-padding;
+    padding: 1.5em $side-padding;
 }
 
 .two_imgs {
@@ -99,7 +99,7 @@ hr {
 
 .three_imgs {
     width: 100%;
-    max-width: calc(#{$padded-width} / 3 - 2.5em);
+    max-width: calc(#{$padded-width} / 3 - 1.5em);
 }
 
 .container {
@@ -123,7 +123,7 @@ hr {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 .flex_space_between, .flex_space_between_centered_column {
