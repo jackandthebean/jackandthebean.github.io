@@ -137,6 +137,11 @@ blockquote:before {
     a {
         color: $accent-font-color;
     }
+    ul {
+        list-style: disc;
+        margin: 1.5em $side-padding;
+        padding-left: 3em;
+    }
 }
 
 .flex_space_between, .flex_space_between_centered_column, .flex_space_between_unresponsive, {
