@@ -111,11 +111,17 @@ blockquote:before {
 .two_imgs {
     width: 100%;
     max-width: calc(#{$padded-width} / 2 - 1.5em);
+    h1, h2, h3 {
+        padding: 0!important;
+    }
 }
 
 .three_imgs {
     width: 100%;
     max-width: calc(#{$padded-width} / 3 - 1.5em);
+    h1, h2, h3 {
+        padding: 0!important;
+    }
 }
 
 .container {
